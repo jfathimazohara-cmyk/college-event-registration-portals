@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Event Registration Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <p class="small-title">COLLEGE EVENT</p>
+        <h1>Registration Portal</h1>
+        <p>Discover events. Register. Participate.</p>
+    </header>
+
+    <main class="container">
+
+        <!-- SCREEN 1: HOME PAGE -->
+        <section id="homePage" class="page">
+            <h2>Upcoming College Events</h2>
+            <p class="subtitle">Choose an event and register online.</p>
+
+            <div class="event-card">
+                <div class="event-icon blue">★</div>
+                <div>
+                    <h3>TECH FEST 2026</h3>
+                    <p>Technology • Coding • Innovation</p>
+                    <small>October 28, 2026</small>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-icon purple">★</div>
+                <div>
+                    <h3>CULTURAL DAY</h3>
+                    <p>Music • Dance • Talent</p>
+                    <small>November 4, 2026</small>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-icon green">★</div>
+                <div>
+                    <h3>SPORTS MEET</h3>
+                    <p>Athletics • Team Games • Fitness</p>
+                    <small>November 10, 2026</small>
+                </div>
+            </div>
+
+            <div class="ready-box">
+                <h3>Ready to participate?</h3>
+                <p>Go to the registration form to reserve your place.</p>
+            </div>
+
+            <button class="main-button" onclick="showForm()">
+                Register for an Event
+            </button>
+        </section>
+
+        <!-- SCREEN 2: REGISTRATION FORM -->
+        <section id="formPage" class="page hidden">
+            <h2>Student Registration Form</h2>
+            <p class="subtitle">Fill in your details and select an event.</p>
+
+            <form id="registrationForm">
+
+                <label for="name">Student Name</label>
+                <input type="text" id="name"
+                    placeholder="e.g., Ayesha Mohamed" required>
+
+                <label for="department">Department</label>
+                <input type="text" id="department"
+                    placeholder="e.g., Computer Applications" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email"
+                    placeholder="e.g., student@college.edu" required>
+
+                <label for="event">Select Event</label>
+                <select id="event" required>
+                    <option value="">Choose an event</option>
+                    <option value="TECH FEST 2026">TECH FEST 2026</option>
+                    <option value="CULTURAL DAY">CULTURAL DAY</option>
+                    <option value="SPORTS MEET">SPORTS MEET</option>
+                </select>
+
+                <button type="submit" class="main-button">
+                    Register Now
+                </button>
+
+                <button type="button" class="back-button"
+                    onclick="showHome()">
+                    Back to Home
+                </button>
+
+            </form>
+        </section>
+
+        <!-- SCREEN 3: REGISTRATION CONFIRMATION -->
+        <section id="confirmationPage" class="page hidden">
+            <h2>Registration Confirmation</h2>
+
+            <div class="confirmation-card">
+                <div class="success-icon">✓</div>
+
+                <h2 class="success-title">Registration Successful!</h2>
+
+                <p>Thank you, <span id="studentName"></span>!</p>
+                <p>Your registration for <strong id="selectedEvent"></strong>
+                   has been submitted successfully.</p>
+
+                <button class="main-button"
+                    onclick="showHome()">
+                    Back to Home
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>College Event Registration Portal © 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+                      </html>
+  
